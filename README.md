@@ -22,6 +22,10 @@ A continuación se listan los módulos incluidos y su descripción general:
 
 | Módulo | Descripción |
 |--------|--------------|
+| `base_api` | CEl módulo amplía el modelo *base* con el fin de crear y consultar objetos. Funciones y métodos básicos de la API para openapi o XML-RPC. |
+| `openapi` | API RESTful para integrar Odoo con cualquier sistema que necesites. |
+| `restict_logins` | Garantiza sesiones simultáneas restringidas, obliga al usuario a cerrar sesión y automatiza la caducidad de la sesión para mejorar la seguridad. |
+| `l10n_co_base` | Ciudades y estados de Colombia. |
 
 
 ---

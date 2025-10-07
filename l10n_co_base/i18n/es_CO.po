@@ -1,0 +1,251 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_co_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-24 21:02+0000\n"
+"PO-Revision-Date: 2025-03-24 21:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__name
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_partner__city
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_users__city
+#: model_terms:ir.ui.view,arch_db:l10n_co_base.view_partner_form_inherit_city
+#: model_terms:ir.ui.view,arch_db:l10n_co_base.view_res_country_state_city_form
+#: model_terms:ir.ui.view,arch_db:l10n_co_base.view_res_country_state_city_tree
+msgid "City"
+msgstr "Ciudad"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_partner__city_id
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_users__city_id
+msgid "City Id"
+msgstr "Ciudad Id"
+
+#. module: l10n_co_base
+#: model:ir.model,name:l10n_co_base.model_res_country_state_city
+msgid "Ciudad"
+msgstr "Ciudad"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,help:l10n_co_base.field_res_country_state_city__statcode
+msgid "Code of the Colombian statistical department"
+msgstr "Código del departamento estadístico de Colombia"
+
+#. module: l10n_co_base
+#: model:ir.model,name:l10n_co_base.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__country_id
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_partner__country_id
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_users__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__create_uid
+msgid "Created by"
+msgstr "Creado Por"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__create_date
+msgid "Created on"
+msgstr "Creado En"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__statcode
+msgid "DANE Code"
+msgstr "Código DANE"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__display_name
+msgid "Display Name"
+msgstr "Nombre Mostrado"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.eu
+msgid "E.U."
+msgstr "E.U."
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.eu
+msgid "Empresa Unipersonal"
+msgstr "Empresa Unipersonal"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_partner__space
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_users__space
+msgid "Espacio"
+msgstr "Espacio"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.ing
+msgid "Ing."
+msgstr "Ing."
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.ing
+msgid "Ingeniero"
+msgstr "Ingeniero"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.srl
+msgid "L.t.d.a."
+msgstr "L.t.d.a."
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación en"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.lic
+msgid "Lic."
+msgstr "Lic."
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.lic
+msgid "Licenciado"
+msgstr "Licenciado"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.med
+msgid "Med."
+msgstr "Med."
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.med
+msgid "Médico"
+msgstr "Médico"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.phd
+msgid "Ph. Doctor"
+msgstr "Ph. Doctor"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.phd
+msgid "PhD."
+msgstr "PhD."
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__phone_prefix
+msgid "Phone Prefix"
+msgstr "Prefijo Telefónico"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.sec
+msgid "S. en C."
+msgstr "S. en C."
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.sa
+msgid "S.A."
+msgstr "S.A."
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.sas
+msgid "S.A.S."
+msgstr "S.A.S."
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.sca
+msgid "S.C.A"
+msgstr "S.C.A"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.col
+msgid "SC"
+msgstr "SC"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.srta
+msgid "Señorita"
+msgstr "Señorita"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.sa
+msgid "Sociedad Anónima"
+msgstr "Sociedad Anónima"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.col
+msgid "Sociedad Collectiva"
+msgstr "Sociedad Collectiva"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.sec
+msgid "Sociedad En Comandita Simple"
+msgstr "Sociedad En Comandita Simple"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.sca
+msgid "Sociedad En Comandita por Acciones"
+msgstr "Sociedad En Comandita por Acciones"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.srl
+msgid "Sociedad Limitada"
+msgstr "Sociedad Limitada"
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.sas
+msgid "Sociedad por Acciones Simplificadas"
+msgstr "Sociedad por Acciones Simplificadas"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.srta
+msgid "Srta"
+msgstr "Srta"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_country_state_city__state_id
+msgid "State"
+msgstr "Provincia"
+
+#. module: l10n_co_base
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_partner__state_id
+#: model:ir.model.fields,field_description:l10n_co_base.field_res_users__state_id
+msgid "State Id"
+msgstr "Provincia"
+
+#. module: l10n_co_base
+#: model:res.partner.title,shortcut:l10n_co_base.tec
+msgid "Tec."
+msgstr "Tec."
+
+#. module: l10n_co_base
+#: model:res.partner.title,name:l10n_co_base.tec
+msgid "Técnico"
+msgstr "Técnico"
+
+#. module: l10n_co_base
+#: model_terms:ir.ui.view,arch_db:l10n_co_base.view_partner_form_inherit_city
+msgid "ZIP"
+msgstr "ZIP"
