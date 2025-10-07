@@ -25,6 +25,7 @@ Credits
                (V14) Aysha Shalin,
                (V15) Aysha Shalin,
                (V16) Jumana Jabin MK
+               (V17) Jumana Jabin MK
   Contact: odoo@cybrosys.com
 
 Contacts

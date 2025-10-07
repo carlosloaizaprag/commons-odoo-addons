@@ -43,26 +43,27 @@ class ResUsers(models.Model):
     last_update = fields.Datetime(string="Last Connection",
                                   help="Last log in")
 
+
     @classmethod
-    def _login(cls, db, login, password, user_agent_env):
+    def _login(cls, db, credential, user_agent_env):
         """
         Handles user login authentication.
         Notify user if they are already logged in and attempt to log in from
         other device.
         """
-        if not password:
+        if not credential.get('password', None):
             raise AccessDenied()
         ip = request.httprequest.environ['REMOTE_ADDR'] if request else 'n/a'
         try:
             with cls.pool.cursor() as cr:
                 self = api.Environment(cr, SUPERUSER_ID, {})[cls._name]
-                with self._assert_can_auth(user=login):
-                    user = self.search(self._get_login_domain(login),
+                with self._assert_can_auth(user=credential.get("login")):
+                    user = self.search(self._get_login_domain(credential.get("login")),
                                        order=self._get_login_order(), limit=1)
                     if not user:
                         raise AccessDenied()
                     user = user.with_user(user)
-                    user._check_credentials(password, user_agent_env)
+                    auth_info = user._check_credentials(credential, user_agent_env)
                     tz = request.httprequest.cookies.get(
                         'tz') if request else None
                     if tz in pytz.all_timezones and (
@@ -80,12 +81,13 @@ class ResUsers(models.Model):
                     user._save_session()
                     user._update_last_login()
         except AccessDenied:
-            _logger.info("Login failed for db:%s login:%s from %s", db, login,
+            _logger.info("Login failed for db:%s login:%s from %s", db, credential.get("login"),
                          ip)
             raise
-        _logger.info("Login successful for db:%s login:%s from %s", db, login,
+        _logger.info("Login successful for db:%s login:%s from %s", db, credential.get("login"),
                      ip)
-        return user.id
+        
+        return auth_info
 
     def _clear_session(self):
         """ Function for clearing the session details of user."""
@@ -98,7 +100,10 @@ class ResUsers(models.Model):
 
     def _save_session(self):
         """ Function for saving session details of the corresponding user."""
-        exp_date = datetime.utcnow() + timedelta(minutes=45)
+        session_time_limit = int(
+            self.env['ir.config_parameter'].sudo().get_param(
+                'restrict_logins.session_expire_time'))
+        exp_date = datetime.utcnow() + timedelta(minutes=session_time_limit)
         sid = request.session.sid
         self.with_user(SUPERUSER_ID).write({
             'sid': sid,

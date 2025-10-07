@@ -62,12 +62,12 @@ class Home(WebHome):
         if request.httprequest.method == 'POST':
             old_uid = request.uid
             try:
-                uid = request.session.authenticate(request.db,
-                                                   request.params['login'],
-                                                   request.params['password'])
+                credential = {'login': request.params['login'], 'password': request.params['password'],
+                              'type': 'password'}
+                auth_info = request.session.authenticate(request.db, credential)
                 request.params['login_success'] = True
                 return request.redirect(
-                    self._login_redirect(uid, redirect=redirect))
+                    self._login_redirect(auth_info['uid'], redirect=redirect))
             except odoo.exceptions.AccessDenied as e:
                 failed_uid = request.env.uid
                 request.env.uid = old_uid

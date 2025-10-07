@@ -45,7 +45,7 @@ class OAS(http.Controller):
             }
 
         return werkzeug.wrappers.Response(
-            json.dumps(namespace.get_OAS(), default=date_utils.json_default),
+            json.dumps(namespace.get_OAS(), default=str),
             status=200,
             **response_params
         )

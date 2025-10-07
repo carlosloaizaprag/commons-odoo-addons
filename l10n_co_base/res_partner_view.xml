@@ -35,13 +35,13 @@
     <record id="view_res_country_state_city_tree" model="ir.ui.view">
         <field name="name">res.country.state.city.tree</field>
         <field name="model">res.country.state.city</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree string="City">
+            <list string="City">
                 <field name="name"/>
                 <field name="state_id"/>
                 <field name="country_id" />
-            </tree>
+            </list>
         </field>
     </record>
         
@@ -50,7 +50,7 @@
         <field name="model">res.country.state.city</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
-            <sheet string="City">
+            <form string="City">
                 <group col="4">
                     <field name="name"/>
                     <field name="state_id"/>
@@ -58,7 +58,7 @@
                     <field name="statcode"/>
                     <field name="country_id"/>
                 </group>
-            </sheet>
+            </form>
         </field>
     </record>
 <!--

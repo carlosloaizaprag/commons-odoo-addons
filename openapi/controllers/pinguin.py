@@ -30,6 +30,7 @@ import werkzeug.wrappers
 import odoo
 from odoo.http import request
 from odoo.service import security
+from odoo.modules.registry import Registry
 
 from odoo.addons.base_api.lib.pinguin import (
     error_response,
@@ -37,7 +38,7 @@ from odoo.addons.base_api.lib.pinguin import (
     get_dictlist_from_model,
     get_model_for_read,
 )
-from odoo.addons.web.controllers.main import ReportController
+from odoo.addons.web.controllers.report import ReportController
 
 try:
     import simplejson as json
@@ -134,6 +135,9 @@ def authenticate_token_for_user(token):
     """
     user = request.env["res.users"].sudo().search([("openapi_token", "=", token)])
     if user.exists():
+        # Ensure we work with a single user record
+        if len(user) > 1:
+            user = user[0]  # Take the first user if multiple found
         # copy-pasted from odoo.http.py:OpenERPSession.authenticate()
         request.session.uid = user.id
         request.session.login = user.login
@@ -273,7 +277,7 @@ def create_log_record(**kwargs):
     # request (we cannot use second cursor and we cannot use aborted
     # transaction)
     if not test_mode:
-        with odoo.registry(request.session.db).cursor() as cr:
+        with Registry(request.session.db).cursor() as cr:
             # use new to save data even in case of an error in the old cursor
             env = odoo.api.Environment(cr, request.session.uid, {})
             _create_log_record(env, **kwargs)

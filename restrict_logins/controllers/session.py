@@ -27,7 +27,6 @@ from odoo import http
 from odoo.http import request
 from odoo.tools._vendor import sessions
 
-
 # Shared parameters for all login/signup flows
 SIGN_UP_REQUEST_PARAMS = {'db', 'login', 'debug', 'token', 'message', 'error', 'scope', 'mode',
                           'redirect', 'redirect_hostname', 'email', 'name', 'partner_id',
