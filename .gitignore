@@ -1,0 +1,196 @@
+# ============================================
+# 🐍 Python / Odoo .gitignore - Pragmatic Ingeniería
+# ============================================
+
+# --------------------------------------------
+# 🔹 Python
+# --------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pdb
+
+# Virtualenv / venv
+.venv/
+venv/
+env/
+ENV/
+.odoo-venv/
+*.env
+*.venv
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Compiled C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+*.log
+*.pot
+*.mo
+test-results/
+pytest_cache/
+.pytest_cache/
+*.tmp
+
+# --------------------------------------------
+# 🔹 Odoo
+# --------------------------------------------
+
+# Archivos temporales y caché
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+*.old
+
+# Carpetas generadas por Odoo
+.odoo/
+.odoorc
+.odoo-test/
+*.session
+*.db
+*.db-shm
+*.db-wal
+
+# Archivos de configuración local
+config/
+odoo.conf
+*.conf
+*.cfg
+*.ini
+
+# Archivos de base de datos
+data/
+*.sql
+*.dump
+*.sqlite3
+
+# Archivos compilados y cacheados por Odoo
+*.pyc
+*.pyo
+*.pyd
+*.orig
+__pycache__/
+
+# --------------------------------------------
+# 🔹 Node / Web assets
+# --------------------------------------------
+node_modules/
+bower_components/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# --------------------------------------------
+# 🔹 IDEs y herramientas de desarrollo
+# --------------------------------------------
+
+# VSCode
+.vscode/
+.history/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Spyder / Jupyter
+.spyproject/
+.ipynb_checkpoints/
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --------------------------------------------
+# 🔹 Docker / Contenedores
+# --------------------------------------------
+.docker/
+docker-compose.override.yml
+*.pid
+*.sock
+*.tar
+*.gz
+
+# --------------------------------------------
+# 🔹 Otros
+# --------------------------------------------
+*.bak
+*.tmp
+*.swp
+*.lock
+*.orig
+*.rej
+
+# Logs de servidores
+logs/
+log/
+*.log
+*.log.*
+*.out
+
+# Cache temporal de desarrollo
+tmp/
+temp/
+.cache/
+__pycache__/
+.mypy_cache/
+.pyre/
+.pytype/
+.dmypy.json
+.dmypy.json.*/
+
+# --------------------------------------------
+# 🔹 Entornos locales y secretos
+# --------------------------------------------
+.env
+.env.*
+*.secret
+*.key
+secrets/
+local_settings.py
